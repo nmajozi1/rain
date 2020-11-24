@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="containter">
+      <form>
+        <mat-form-field>
+          <mat-label>Filter</mat-label>
+          <input matInput name="filter" [(ngModel)]="filter" (ngModelChange)="filterUsers($event)">
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-4 card-style" *ngFor="let user of Users">
+    <mat-card (click)="userOrders(user.id)">
+      <mat-card-header>
+        <div mat-card-avatar>
+          <mat-icon>person</mat-icon>
+        </div>
+        <mat-card-title>{{ user.name }} {{ user.lastName}}</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>
