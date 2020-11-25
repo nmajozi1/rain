@@ -20,9 +20,9 @@
       <tr *ngFor="let order of orders">
         <td>{{ order.id }}</td>
         <td>{{ order.userId }}</td>
-        <td>{{ order.createdAt }}</td>
+        <td>{{ order.createdAt | date }}</td>
         <td>{{ order.product_name }}</td>
-        <td>{{ order.price }}</td>
+        <td>R{{ order.price }}</td>
         <td>{{ order.paid }}</td>
         <td>{{ order.product_type }}</td>
       </tr>
