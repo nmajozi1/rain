@@ -16,7 +16,7 @@
         <th scope="col">Product Type</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngIf="orders">
       <tr *ngFor="let order of orders">
         <td>{{ order.id }}</td>
         <td>{{ order.userId }}</td>
